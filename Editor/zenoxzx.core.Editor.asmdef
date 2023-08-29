@@ -1,6 +1,6 @@
 {
-    "name": "zenoxzx.core",
-    "rootNamespace": "ZenoxZX.Core",
+    "name": "zenoxzx.core.Editor",
+    "rootNamespace": "ZenoxZX.Core.Editor",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
