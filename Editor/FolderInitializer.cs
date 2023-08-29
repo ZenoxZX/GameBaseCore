@@ -16,7 +16,7 @@ namespace ZenoxZX.Core.Editor
             "Sprites",
         };
 
-        private static readonly string[] SubFolderNames =
+        private static readonly string[] ScriptSubFolderNames =
         {
             "Components",
             "Datas",
@@ -24,6 +24,12 @@ namespace ZenoxZX.Core.Editor
             "Extensions",
             "Installers",
             "Utils"
+        };
+        
+        private static readonly string[] ComponentSubFolderNames =
+        {
+            "Login",
+            "Main"
         };
 
         [MenuItem("Help/Create Folder Structure")]
@@ -38,11 +44,18 @@ namespace ZenoxZX.Core.Editor
                     AssetDatabase.CreateFolder("Assets", folderName);
             }
 
-            foreach (string folderName in SubFolderNames)
+            foreach (string folderName in ScriptSubFolderNames)
             {
                 string path = $"{mainPath}/Scripts/{folderName}";
                 if (!Directory.Exists(path))
                     AssetDatabase.CreateFolder("Assets/Scripts", folderName);
+            }
+            
+            foreach (string folderName in ComponentSubFolderNames)
+            {
+                string path = $"{mainPath}/Scripts/Components/{folderName}";
+                if (!Directory.Exists(path))
+                    AssetDatabase.CreateFolder("Assets/Scripts/Components", folderName);
             }
         }
     }
