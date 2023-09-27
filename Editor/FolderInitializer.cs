@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace ZenoxZX.Core.Editor
 {
+#if UNITY_EDITOR
     public static class FolderInitializer
     {
         private static readonly string[] MainFolderNames =
@@ -59,4 +60,5 @@ namespace ZenoxZX.Core.Editor
             }
         }
     }
+    #endif
 }
